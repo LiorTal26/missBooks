@@ -1,0 +1,107 @@
+@import "./books-app.css";
+@import "./book-app.css";
+@import "./googlebook-app.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: whitesmoke;
+}
+
+h1,
+h2,
+h3,
+p {
+  padding: 10px;
+  margin: 0;
+}
+
+.app-footer,
+.app-header {
+  color: goldenrod;
+  padding: 0;
+  margin: 0;
+  height: 3.2em;
+  background-color: #444;
+}
+
+.app-footer {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+}
+
+.app-header {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.app-header h1 {
+  float: left;
+}
+
+.app-header nav {
+  padding: 20px;
+  float: right;
+}
+
+.app-header nav a {
+  color: goldenrod;
+  text-decoration: none;
+}
+
+.books-app,
+.book-app,
+.googlebook-app,
+.about-app {
+  min-height: calc(100vh - 6.4em);
+}
+
+.googlebook-app .books-app {
+  min-height: calc(100vh - 6.4em - 250px);
+}
+
+/* modal extra styles */
+.popup-modal > .preview > .long-reading::after {
+  color: darkred;
+  padding-inline-start: 10px;
+  font-size: 0.8em;
+  content: "< 500 - Long Reading";
+}
+
+.popup-modal > .preview > .descent-reading::after {
+  color: darkorange;
+  padding-inline-start: 10px;
+  font-size: 0.8em;
+  content: "< 200 - Descent Reading";
+}
+
+.popup-modal > .preview > .light-reading::after {
+  color: darkgreen;
+  padding-inline-start: 10px;
+  font-size: 0.8em;
+  content: "> 100 - Light Reading";
+}
+
+.popup-modal > .preview > .veteran-book::after {
+  color: darkred;
+  padding-inline-start: 10px;
+  font-size: 0.8em;
+  content: "Veteran Book";
+}
+
+.popup-modal > .preview > .new-book::after {
+  color: darkgreen;
+  padding-inline-start: 10px;
+  font-size: 0.8em;
+  content: "New!";
+}
+
+.popup-modal > .preview > .on-sale::after {
+  color: darkred;
+  padding-inline-start: 10px;
+  font-weight: bold;
+  content: ">> HOT SALE !!!";
+}

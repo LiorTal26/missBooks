@@ -1,0 +1,204 @@
+@import "./cmp/popup-modal.cmp.css";
+@import "./cmp/pagination-panel.cmp.css";
+
+.books-app {
+  margin: 0;
+  padding: 25px;
+  width: 100%;
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* grid control panel */
+
+.books-app > .grid-control {
+  user-select: none;
+}
+
+.books-app > .grid-control > .grid-filter {
+  padding: 10px;
+  float: left;
+}
+
+.books-app > .grid-control div {
+  display: inline-block;
+  padding-inline-start: 25px;
+  padding-block-end: 10px;
+}
+
+.books-app > .grid-control label {
+  color: #333;
+  font-weight: bold;
+}
+
+.books-app > .grid-control input {
+  position: relative;
+  top: -1px;
+  border: 0;
+  height: 18px;
+  border-radius: 5px;
+}
+
+.books-app > .grid-control input[type="number"] {
+  width: 50px;
+}
+
+.books-app > .grid-control .edit-mode > button {
+  position: relative;
+  top: 8px;
+  left: 4px;
+  height: 20px;
+  width: 20px;
+  font-size: 1em;
+  font-weight: bold;
+  border: 0;
+  border-radius: 5px;
+  transition: 0.5s;
+  background-color: silver;
+}
+
+.books-app > .grid-control .edit-mode > button:hover {
+  transform: scale(110%);
+  background-color: gold;
+}
+
+.books-app > .grid-control .edit-mode > label:nth-child(1) {
+  position: relative;
+  top: 0.5em;
+}
+
+.books-app > .grid-control .edit-mode > .switch {
+  position: relative;
+  top: 0.35em;
+  display: inline-block;
+  width: 3.5em;
+  height: 1.5em;
+}
+
+.books-app > .grid-control .edit-mode > .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.books-app > .grid-control > .edit-mode > .switch > span {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: silver;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.books-app > .grid-control .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.3em;
+  width: 1.3em;
+  left: 0.15em;
+  bottom: 0.1em;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.books-app > .grid-control input:checked + .slider {
+  background-color: gold;
+}
+
+.books-app > .grid-control input:focus + .slider {
+  box-shadow: 0 0 1px gold;
+}
+
+.books-app > .grid-control input:checked + .slider:before {
+  transform: translateX(1.9em);
+}
+
+/* grid display */
+
+.books-app > .grid-display {
+  clear: both;
+  display: grid;
+  gap: 0 25px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  flex-grow: 1;
+}
+
+.books-app > .grid-display > div {
+  text-align: center;
+  flex-grow: 1;
+  font-size: 1em;
+  margin: 10px 10px 25px 10px;
+  background-color: transparent;
+  transition: transform 0.5s;
+  border-radius: 10px;
+}
+
+.books-app > .grid-display > div:hover {
+  transform: scale(102%);
+}
+
+.books-app > .grid-display > div > span {
+  cursor: pointer;
+  position: relative;
+  top: 1em;
+  left: 2.45em;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 1.625em;
+  font-weight: bold;
+  color: darkred;
+  width: 30px;
+  opacity: 0.7;
+  transition: opacity 0.5s, color 0.5s;
+}
+
+.books-app > .grid-display > div > span:hover {
+  opacity: 1;
+  color: red;
+}
+
+/* grid display */
+
+.books-app > .grid-display > .books-preview {
+  margin: 0;
+  transition: 0.5s;
+}
+
+.books-app > .grid-display > .books-preview div img {
+  cursor: pointer;
+  height: 200px;
+  width: 150px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.books-app > .grid-display > .books-preview div h1,
+.books-app > .grid-display > .books-preview div h2 {
+  margin: 0;
+  padding: 10px;
+}
+
+.books-app > .grid-display > .books-preview div h1 {
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.books-app > .grid-display > .books-preview div h2 {
+  font-size: 1em;
+  font-weight: normal;
+  color: #666;
+}
+
+.books-app > .grid-display > .books-preview div {
+  transition: 0.5s;
+}
+
+.books-app > .grid-display > .books-preview .selected {
+  transform: scale(110%);
+}

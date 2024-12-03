@@ -1,0 +1,40 @@
+.pagination-navigator {
+  text-align: center;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.pagination-navigator > div {
+  display: inline-block;
+}
+
+.pagination-navigator button {
+  font-weight: bold;
+  height: 2rem;
+  width: 2rem;
+  color: black;
+  background-color: whitesmoke;
+  border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0px 0.3em;
+  display: inline-block;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.pagination-navigator button:not(:disabled):hover {
+  transform: scale(120%);
+}
+
+.pagination-navigator button:disabled {
+  /* visibility: hidden; */
+  cursor: initial;
+  color: silver;
+}
+
+.pagination-navigator button.pgnactive {
+  color: #333;
+  background-color: gold;
+  transform: scale(115%);
+}

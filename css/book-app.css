@@ -1,0 +1,120 @@
+.book-app {
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.book-app .book-review {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.book-app .book-review h1 {
+  padding: 5px 25px 3px 25px;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.book-app .book-review h2 {
+  padding: 5px 25px;
+  margin: 0;
+  font-size: 1em;
+}
+
+.book-app .book-review h3 {
+  padding: 5px 25px;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.book-app .book-review p {
+  padding: 5px 25px;
+}
+
+.book-app .book-display {
+  padding: 25px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.book-app .book-display button {
+  justify-self: right;
+  cursor: pointer;
+  border-radius: 10px;
+  min-width: 100px;
+  font-weight: bold;
+  color: black;
+  background-color: silver;
+  padding: 7px;
+  border: 0;
+  transition: 0.5s;
+  opacity: 0.7;
+  width: 100px;
+  margin-inline-end: 10px;
+}
+
+.book-app .book-display button:hover {
+  opacity: 1;
+  background-color: gold;
+}
+
+.book-app .book-display img {
+  max-height: 420px;
+  padding: 25px;
+  grid-column: 2;
+  grid-row: 1/20;
+}
+
+.book-app .book-display > div {
+  padding: 10px 25px;
+  line-height: 1.4em;
+}
+
+.book-app .book-display > div span {
+  font-weight: bold;
+}
+
+.book-app .book-display div.long-reading::after {
+  color: darkred;
+  padding-inline-start: 10px;
+  font-size: 0.8em;
+  content: "< 500 - Long Reading";
+}
+
+.book-app .book-display div.descent-reading::after {
+  color: darkorange;
+  padding-inline-start: 10px;
+  font-size: 0.8em;
+  content: "< 200 - Descent Reading";
+}
+
+.book-app .book-display div.light-reading::after {
+  color: darkgreen;
+  padding-inline-start: 10px;
+  font-size: 0.8em;
+  content: "> 100 - Light Reading";
+}
+
+.book-app .book-display div.veteran-book::after {
+  color: darkred;
+  padding-inline-start: 10px;
+  font-size: 0.8em;
+  content: "Veteran Book";
+}
+
+.book-app .book-display div.new-book::after {
+  color: darkgreen;
+  padding-inline-start: 10px;
+  font-size: 0.8em;
+  content: "New!";
+}
+
+.book-app .book-display div.on-sale::after {
+  color: darkred;
+  padding-inline-start: 10px;
+  font-weight: bold;
+  content: ">> HOT SALE !!!";
+}
